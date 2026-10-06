@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculul termic al MAI – PCMAI</title>
+<meta name="description" content="Calculul termic al motorului cu ardere internă (MAS / MAC) – aplicație pentru proiectul Procese și caracteristici ale motoarelor cu ardere internă, Universitatea „Ovidius” din Constanța.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="antet">
+  <div class="antet-text">
+    <h1>Calculul termic al motorului cu ardere internă</h1>
+    <p>Procese și caracteristici ale motoarelor cu ardere internă – proiect · Universitatea „Ovidius” din Constanța · FIMIM</p>
+  </div>
+  <div class="antet-butoane">
+    <button type="button" id="btn-csv">Descarcă rezultatele (CSV)</button>
+    <button type="button" id="btn-print">Tipărește</button>
+  </div>
+</header>
+
+<main class="pagina">
+  <section class="date" aria-label="Date de intrare">
+    <h2>Date de proiectare și parametri inițiali</h2>
+    <p class="nota">Completați valorile temei proprii. Intervalele recomandate sunt în Tabelul 1.1 din îndrumar. Calculul se actualizează automat.</p>
+    <div class="exemple">
+      <span>Încarcă exemplul din îndrumar:</span>
+      <button type="button" data-exemplu="MAS">MAS (cap. 10)</button>
+      <button type="button" data-exemplu="MAC">MAC (cap. 11)</button>
+    </div>
+    <form id="formular" autocomplete="off"></form>
+  </section>
+
+  <section class="rezultate" aria-label="Rezultate">
+    <div id="sumar" class="sumar"></div>
+    <nav class="taburi" id="taburi" role="tablist"></nav>
+    <div id="continut"></div>
+  </section>
+</main>
+
+<footer class="subsol">
+  <p>Metoda: calcul la 1 kg de combustibil, bilanț energetic cu energia internă și entalpia reale ale gazelor (polinoame NASA – GRI-Mech 3.0), interpolare liniară pe grila din 50 în 50 K; n₁ și n₂ prin 8 iterații de punct fix. Rezultatele sunt identice cu foaia de calcul PCMAI_Calcul_termic_2026-2027.xlsx.</p>
+  <p>Ș.l. univ. dr. ing. Camil Tudor · Asist. univ. drd. Adrian-Mircea Beldugan · Universitatea „Ovidius” din Constanța, 2026</p>
+</footer>
+
+<script src="tabele.js"></script>
+<script src="calc.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
